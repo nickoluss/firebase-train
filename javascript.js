@@ -1,9 +1,5 @@
 
- 
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
+ var config = {
     apiKey: "AIzaSyBdzrrxdDOPicLwDv8VUHSPL5qmABUNC2o",
     authDomain: "train-6a245.firebaseapp.com",
     databaseURL: "https://train-6a245.firebaseio.com",
@@ -12,22 +8,8 @@
     messagingSenderId: "824512012127"
   };
   firebase.initializeApp(config);
-</script>
 
   var database = firebase.database();
-
-  // Live Time of The Day 
-
-  var updateTime = function(){
-  	var now = moment().format('hh:mm');
-  	$('#currentTime').html(now);
-  }
-
-  $(document).ready(function(){
-    updateTime();
-    setInterval(updateTime, 1000);
-});
-
   
 
 $('#submit').on('click', function(){
